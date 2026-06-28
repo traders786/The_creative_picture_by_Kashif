@@ -15,7 +15,7 @@ import { Category } from '../types';
 // 1. Upload your video file (e.g. "indian_bride.mp4") to your root folder or standard assets.
 // 2. Put it in Vite's public folder if available, or just use a relative or direct URL.
 // 3. Update the variable below to reference it, e.g. "/indian_bride.mp4".
-const HERO_VIDEO_URL = "/indian_bride.mp4";
+const HERO_VIDEO_URL = "indian_bride.mp4";
 
 interface HomeViewProps {
   onNavigate: (page: string) => void;
