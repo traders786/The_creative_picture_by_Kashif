@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Creative Picture</title>
+    <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+    <script>
+      // Fix potential "Cannot set property fetch of #<Window> which has only a getter" error in sandboxed environments
+      try {
+        let currentFetch = window.fetch;
+        Object.defineProperty(window, 'fetch', {
+          get() {
+            return currentFetch;
+          },
+          set(value) {
+            currentFetch = value;
+          },
+          configurable: true,
+          enumerable: true
+        });
+      } catch (e) {
+        console.warn('Unable to patch window.fetch:', e);
+      }
+    </script>
+    <script type="module" crossorigin src="/The_creative_picture_by_Kashif/assets/index-CKoHR2A7.js"></script>
+    <link rel="stylesheet" crossorigin href="/The_creative_picture_by_Kashif/assets/index-CT7OrQ3V.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
