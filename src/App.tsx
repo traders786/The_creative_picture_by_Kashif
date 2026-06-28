@@ -30,8 +30,38 @@ import DroneView from './components/DroneView';
 // Curated data
 import { GALLERY_ITEMS } from './data';
 
+const PAGE_TO_HASH: Record<string, string> = {
+  'Home': '#/home',
+  'Photography': '#/photography',
+  'Wedding Photography': '#/wedding-photography',
+  'Pre-Wedding Shoot': '#/pre-wedding',
+  'Cinematography': '#/cinematography',
+  'Videography': '#/videography',
+  'Baby Shoots': '#/baby-shoots',
+  'Drone Aerial Coverage': '#/drone-aerial',
+  'Gallery': '#/gallery',
+  'Services': '#/services',
+  'Pricing': '#/pricing',
+  'Stories': '#/stories',
+  'About Us': '#/about',
+  'Testimonials': '#/testimonials',
+  'FAQ': '#/faq',
+  'Contact Us': '#/contact',
+  'Book Now': '#/book-now'
+};
+
+const HASH_TO_PAGE: Record<string, string> = Object.entries(PAGE_TO_HASH).reduce(
+  (acc, [page, hash]) => ({ ...acc, [hash]: page }),
+  {} as Record<string, string>
+);
+
+const getPageFromHash = () => {
+  const hash = window.location.hash;
+  return HASH_TO_PAGE[hash] || 'Home';
+};
+
 export default function App() {
-  const [activePage, setActivePage] = useState('Home');
+  const [activePage, setActivePage] = useState(getPageFromHash);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -44,6 +74,18 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Set default hash if none exists
+    if (!window.location.hash) {
+      window.location.hash = '#/home';
+    }
+
+    const handleHashChange = () => {
+      const newPage = getPageFromHash();
+      setActivePage(newPage);
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+
     // Scroll trackers
     const handleScroll = () => {
       // Back to top selector
@@ -68,6 +110,7 @@ export default function App() {
     }, 1500);
 
     return () => {
+      window.removeEventListener('hashchange', handleHashChange);
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(loadTimer);
     };
@@ -85,7 +128,8 @@ export default function App() {
   }, [lightboxPhotoUrl, activeVideoUrl]);
 
   const handleNavigation = (page: string) => {
-    setActivePage(page);
+    const hash = PAGE_TO_HASH[page] || '#/home';
+    window.location.hash = hash;
     window.scrollTo(0, 0);
   };
 
