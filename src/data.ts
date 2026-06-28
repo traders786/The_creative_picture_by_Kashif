@@ -41,7 +41,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'pw1',
     title: 'Golden Hour Embrace',
     category: 'prewedding',
-    imageUrl: '/assets/images_and_videos/prewedding/pre_wedding_1_cover_photo.jpg',
+    imageUrl: 'assets/images_and_videos/prewedding/pre_wedding_1_cover_photo.jpg',
     description: 'Ethereal warm glow wrapping around a timeless pre-wedding cinematic shot in the dunes.',
     location: 'Sam Sand Dunes, Jodhpur',
     year: '2026'
@@ -414,8 +414,8 @@ export const VIDEOGRAPHY_ITEMS: VideographyItem[] = [
     id: 'v1', 
     title: 'Golden sands pre-wedding cinematic', 
     location: 'Jodhpur Dunes', 
-    img: '/assets/images_and_videos/prewedding/pre_wedding_1_cover_photo.jpg',
-    videoUrl: '/assets/images_and_videos/prewedding/pre_wedding_1.mp4'
+    img: 'assets/images_and_videos/prewedding/pre_wedding_1_cover_photo.jpg',
+    videoUrl: 'assets/images_and_videos/prewedding/pre_wedding_1.mp4'
   },
   { 
     id: 'v2', 

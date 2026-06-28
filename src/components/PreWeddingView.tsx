@@ -36,7 +36,7 @@ export default function PreWeddingView({ onSelectPhoto, onNavigate, onPlayVideo 
               y: { duration: 35, ease: 'easeInOut', repeat: Infinity }
             }}
             className="absolute inset-0 bg-cover bg-center brightness-[0.35]"
-            style={{ backgroundImage: `url("/assets/images_and_videos/prewedding/Pre_wedding_page_cover_photo_at_the_top.jpg")` }}
+            style={{ backgroundImage: `url("assets/images_and_videos/prewedding/Pre_wedding_page_cover_photo_at_the_top.jpg")` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
           
@@ -101,7 +101,7 @@ export default function PreWeddingView({ onSelectPhoto, onNavigate, onPlayVideo 
             {/* Teaser Film 1 */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-yellow-500/20 bg-black aspect-[9/16] w-full max-w-[300px] mx-auto">
               <img 
-                src="/assets/images_and_videos/prewedding/pre_wedding_1_cover_photo.jpg" 
+                src="assets/images_and_videos/prewedding/pre_wedding_1_cover_photo.jpg" 
                 alt="Pre-wedding video 1 cover" 
                 className="w-full h-full object-cover opacity-50 brightness-75 transition-all"
               />
@@ -109,7 +109,7 @@ export default function PreWeddingView({ onSelectPhoto, onNavigate, onPlayVideo 
                 <motion.button
                   whileHover={{ scale: 1.15 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => onPlayVideo('/assets/images_and_videos/prewedding/pre_wedding_1.mp4')}
+                  onClick={() => onPlayVideo('assets/images_and_videos/prewedding/pre_wedding_1.mp4')}
                   className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#D4AF37] text-black shadow-lg shadow-yellow-500/30 flex items-center justify-center hover:bg-white cursor-pointer"
                 >
                   <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-black translate-x-0.5" />
@@ -127,7 +127,7 @@ export default function PreWeddingView({ onSelectPhoto, onNavigate, onPlayVideo 
             {/* Teaser Film 2 */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-yellow-500/20 bg-black aspect-[9/16] w-full max-w-[300px] mx-auto">
               <img 
-                src="/assets/images_and_videos/prewedding/pre_wedding_2_cover_photo.jpg" 
+                src="assets/images_and_videos/prewedding/pre_wedding_2_cover_photo.jpg" 
                 alt="Pre-wedding video 2 cover" 
                 className="w-full h-full object-cover opacity-50 brightness-75 transition-all"
               />
@@ -135,7 +135,7 @@ export default function PreWeddingView({ onSelectPhoto, onNavigate, onPlayVideo 
                 <motion.button
                   whileHover={{ scale: 1.15 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => onPlayVideo('/assets/images_and_videos/prewedding/pre_wedding_2.mp4')}
+                  onClick={() => onPlayVideo('assets/images_and_videos/prewedding/pre_wedding_2.mp4')}
                   className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#D4AF37] text-black shadow-lg shadow-yellow-500/30 flex items-center justify-center hover:bg-white cursor-pointer"
                 >
                   <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-black translate-x-0.5" />
