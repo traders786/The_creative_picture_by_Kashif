@@ -1,0 +1,6 @@
+{
+  "name": "The Creative Picture",
+  "description": "Ultra-premium cinematic photography & cinematography portfolio. Luxury, editorial visual experience with gold accents, smooth animations, and rich immersive pages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
